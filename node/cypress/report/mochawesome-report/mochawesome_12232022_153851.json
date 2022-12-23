@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-23T10:08:49.136Z",
+    "end": "2022-12-23T10:08:51.865Z",
+    "duration": 2729,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a41a94a2-36fe-495e-b5af-ff5622dbd534",
+      "title": "",
+      "fullFile": "cypress/e2e/component-based-testing/apitest.cy.js",
+      "file": "cypress/e2e/component-based-testing/apitest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9963f721-186e-444c-820e-893c8ff110f3",
+          "title": "HTTP Example",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET",
+              "fullTitle": "HTTP Example GET",
+              "timedOut": null,
+              "duration": 226,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://jsonplaceholder.typicode.com/posts/1'\n}).then(function (response) {\n  expect(response.body).have.property('id');\n});",
+              "err": {},
+              "uuid": "9f7d5e08-e00f-46f3-8f1f-94c31ef23a21",
+              "parentUUID": "9963f721-186e-444c-820e-893c8ff110f3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST",
+              "fullTitle": "HTTP Example POST",
+              "timedOut": null,
+              "duration": 618,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://jsonplaceholder.typicode.com/posts',\n  body: JSON.stringify({\n    title: 'foo',\n    json: {\n      title: 'hello'\n    },\n    body: 'bar',\n    userId: 1\n  }),\n  headers: {\n    'Content-type': 'application/json; charset=UTF-8'\n  }\n}).then(function (response) {\n  expect(response.body).have.property('title');\n  expect(response.body.json).to.deep.equal({\n    title: 'hello'\n  });\n});",
+              "err": {},
+              "uuid": "1208b73e-08ba-455d-ab1c-48096112f4ab",
+              "parentUUID": "9963f721-186e-444c-820e-893c8ff110f3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PUT",
+              "fullTitle": "HTTP Example PUT",
+              "timedOut": null,
+              "duration": 652,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'PUT',\n  url: 'https://jsonplaceholder.typicode.com/posts/1',\n  body: JSON.stringify({\n    id: 1,\n    title: 'foo',\n    json: {\n      title: 'hello',\n      id: 1\n    },\n    body: 'bar',\n    userId: 1\n  }),\n  headers: {\n    'Content-type': 'application/json; charset=UTF-8'\n  }\n}).then(function (response) {\n  expect(response.body).have.property('id');\n  expect(response.body.json).to.deep.equal({\n    title: 'hello',\n    id: 1\n  });\n});",
+              "err": {},
+              "uuid": "a7c3df3c-2ce7-471a-8c92-682b4d22cea1",
+              "parentUUID": "9963f721-186e-444c-820e-893c8ff110f3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PATCH",
+              "fullTitle": "HTTP Example PATCH",
+              "timedOut": null,
+              "duration": 605,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'PATCH',\n  url: 'https://jsonplaceholder.typicode.com/posts/1',\n  body: JSON.stringify({\n    title: 'foo'\n  }),\n  headers: {\n    'Content-type': 'application/json; charset=UTF-8'\n  }\n}).then(function (response) {\n  expect(response.body).have.property('id');\n  // expect(response.body.json).to.deep.equal({title: 'hello',id: 1})\n});",
+              "err": {},
+              "uuid": "3d8ddabc-81f5-44f7-9c99-4062f0236d9a",
+              "parentUUID": "9963f721-186e-444c-820e-893c8ff110f3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "DELETE",
+              "fullTitle": "HTTP Example DELETE",
+              "timedOut": null,
+              "duration": 595,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'DELETE',\n  url: 'https://jsonplaceholder.typicode.com/posts/1'\n}).then(function (response) {});",
+              "err": {},
+              "uuid": "83ba453a-0d1b-4a3c-9758-32e3a5235a1e",
+              "parentUUID": "9963f721-186e-444c-820e-893c8ff110f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9f7d5e08-e00f-46f3-8f1f-94c31ef23a21",
+            "1208b73e-08ba-455d-ab1c-48096112f4ab",
+            "a7c3df3c-2ce7-471a-8c92-682b4d22cea1",
+            "3d8ddabc-81f5-44f7-9c99-4062f0236d9a",
+            "83ba453a-0d1b-4a3c-9758-32e3a5235a1e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2696,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

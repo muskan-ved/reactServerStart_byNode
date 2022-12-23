@@ -12,12 +12,14 @@ function App() {
   
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/robots.txt"
+         
+          download
+          
         >
           Learn React
         </a>
+        <input type='text'  className="text-try" placeholder="hello" autoFocus/>
         <form action="../../../post" method="post" 
               className="form">
           <button type="submit">Connected?</button>
