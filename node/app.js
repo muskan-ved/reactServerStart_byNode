@@ -25,7 +25,6 @@ app.get('/*', (req, res) => res.sendFile(path.join(__dirname)));
 const server = http.createServer(app);
 
 server.once('error', function(err) {
-  
   if (err.code === 'EADDRINUSE') {
     // port is currently in use
   kill(PORT, "tcp");
@@ -39,8 +38,3 @@ server.once('listening', function(res) {
 });
 
 server.listen(PORT, () => console.log(`Server started on port ${PORT} on http://${host}:${PORT}`));
-
-
-
-
-
