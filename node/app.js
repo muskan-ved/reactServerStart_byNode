@@ -15,7 +15,7 @@ app.post("/post", (req, res) => {
 });
 
   
-const PORT = 8080;
+const PORT = 6020;
 const host = "localhost";
 
 app.use(express.static(__dirname + '../../reactdemo/build'));
