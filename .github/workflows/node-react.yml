@@ -22,7 +22,7 @@ jobs:
            cd node
            npm install -f
            npm install -g pm2
-           pm2 start index.js
+           pm2 start app.js
            cd reactdemo
            npm install
            npm run build
