@@ -23,7 +23,7 @@ jobs:
            npm install -f
            npm install -g pm2
            pm2 start app.js
-           cd reactdemo
+           cd ../reactdemo
            npm install
            npm run build
            
